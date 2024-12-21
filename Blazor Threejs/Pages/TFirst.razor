@@ -14,7 +14,7 @@
 	protected override async Task OnAfterRenderAsync(bool firstRender)
 	{
 		object[] args = { canvasId };
-		var module = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "blazor-threejs/js/threeExample1.js");
+		var module = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "./blazor-threejs/js/threeExample1.js");
 		await module.InvokeVoidAsync("RunScene", args);
 	}
 }
